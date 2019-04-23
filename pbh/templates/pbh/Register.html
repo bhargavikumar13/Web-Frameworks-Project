@@ -1,0 +1,68 @@
+{% extends 'pbh/base.html' %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Register</h1>
+	    <p class="lead">Create your credentials here</p>
+	  </div>
+	</div>
+</div>
+<div class="row" class="body-row">
+	<form method="POST">
+	<table class="table">
+		{% csrf_token %}
+		{{form.as_table}}
+	<tr>
+		<td>
+			<button type="submit" class="btn btn-lg btn-primary">Register</button>
+		</td>
+		<td>
+		</td>
+	</tr>
+	</table>
+</form>
+</div>
+<!-- 	<div id="mainform">		
+		<br>
+		<form method="post">
+			{%csrf_token%}
+			<label class ="labelcl">NAME <input type="text" name="name" id = "textboxcl1" required></label><br>
+			<label class ="labelcl">FATHER'S NAME<input type="text" name="fname" id = "textboxcl2" required></label><br>
+			<label class ="labelcl">MOTHER'S NAME<input type="text" name="mname" id = "textboxcl3" required></label><br>
+			<label class ="labelcl">AGE<input type="number" name="age" id = "textboxcl4" min="15" max="30" required></label><br>
+			<label class ="labelcl">DATE OF BIRTH<input type="date" name="dob" id = "textboxcl5" required></label><br>
+			<label class ="labelcl">EMAIL ID<input type="email" name="emailid" id = "textboxcl6" placeholder="abc@xyx.com" required></label><br>
+			<label class ="labelcl">PHONE NUMBER<input type="number" name="phone" id = "textboxcl7" required></label><br>
+			<label class ="labelcl">PARENT'S PHONE NUMBER<input type="number" name="pphone" id = "textboxcl8" required></label><br>
+			<label class ="labelcl">SEMESTER<input type="number" name="sem" id = "textboxcl9"min="1"
+			max="8" required></label><br>
+			<label class ="labelcl">BRANCH<select name="branch" id ="textboxcl10" required>
+				<option>CSE</option>
+				<option>ECE</option>
+				<option>ME</option>
+				<option>EEE</option>
+				<option>BT</option>
+				<option>CIVIL</option>
+			</select></label><br><br>
+			<label class ="labelcl" id="textar">ADDRESS</label>
+			<textarea rows="100" cols ="100" name="address" placeholder="Address" id ="textboxcl11" required></textarea><br><br>
+			<div id="lg">
+				<h1 style="margin-top: 0px;margin-bottom: 0px;" align="center">LOCAL GUARDIAN</h1>
+			</div>
+			<br>
+			<label class ="labelcl">LG-NAME<input type="text" name="lgname" id = "textboxcl12" required></label><br>
+			<label class ="labelcl">LG-AGE<input type="number" name="lgage" id = "textboxcl13" min="35" required></label><br>
+			<label class ="labelcl">LG-DATE OF BIRTH<input type="date" name="lgdob" id = "textboxcl14" required></label><br>
+			<label class ="labelcl">LG-PHONE NUMBER<input type="number" name="lgphone" id = "textboxcl15" required></label><br><br>
+			<label class ="labelcl" id="textar">LG-ADDRESS</label>
+			<textarea rows="100" cols ="100" name="lgaddress" placeholder="Address" id ="textboxcl16" required></textarea>
+			<br><br>
+			<input type="submit" name="submit" id ="submitbt">
+		</form>
+	</div> -->
+	
+{% endblock %}

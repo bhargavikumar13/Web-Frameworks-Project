@@ -1,0 +1,17 @@
+{% extends 'pbh/base.html' %}
+
+{% block content %}
+
+
+<div id="header1">
+			REGISTER
+	</div>
+<div id="mainform">
+<form method="post">
+	{%csrf_token%}
+	{{form.as_p}}
+	<button id="submitbt" type="submit">Submit</button>
+</form>
+</div>
+
+{% endblock %}

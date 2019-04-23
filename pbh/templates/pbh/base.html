@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PES BOYS HOSTEL</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id ="ss" style="background-color: #202123">
+			<div class="row">
+				<div class="col-lg-10">
+					<div id = "searchbar"class="searchelem"  >
+	  					<a class="active" href="/pbh/">Home</a>
+	  					<a class="active" href="/pbh/about/">About</a>
+	  					<a class="active" href="/pbh/view_details">View Details</a>
+	  					<a class="active" href="/pbh/edit_details">Edit Details</a>
+	  					{% if username is None %}
+	  					<a class="active" href="/pbh/login">Login</a>
+	  					{% else %}
+	  						<a class="active dropdown-toggle" href="#" id="dropdownMenu2" data-toggle="dropdown">
+	  							<i class="fa fa-user-circle-o" aria-hidden="true" style="margin: 0px;padding:0px;font-size:25px"></i> &nbsp;{{username}}&nbsp;
+	  						    <span class="caret"></span>
+  						    </a>
+  						      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" style="left: 50%">
+							    <li style="padding:6px"><a href="/pbh/logout"><i class="fa fa-power-off" aria-hidden="true" style="margin: 0px;padding:0px;font-size:25px"></i>&nbsp;Logout</a></li>
+							  </ul>
+	  					{% endif %}
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="btn-toolbar">
+						<a class="btn-group" href="#"><i class="fa fa-facebook-square fa-inverse"></i></a>
+						<a class="btn-group" href="#"><i class="fa fa-twitter-square fa-inverse"> </i></a>
+						<a class="btn-group" href="#"><i class="fa fa-linkedin-square fa-inverse"></i></a>
+						<a class="btn-group" href="#"><i class="fa fa-youtube-square fa-inverse"></i></a>
+						<a class="btn-group" href="#"><i class="fa fa-instagram-square fa-inverse"> </i></a>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

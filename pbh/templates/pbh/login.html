@@ -1,0 +1,33 @@
+{% extends 'pbh/base.html' %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Login</h1>
+	    <p class="lead">Login with your credentials</p>
+	  </div>
+	</div>
+</div>
+
+
+<div class="row" class="body-row">
+	<form method="POST">
+	<table class="table">
+		{% csrf_token %}
+		{{form.as_table}}
+	<tr>
+		<td>
+			<button type="submit" class="btn btn-lg btn-primary">Login</button>
+		</td>
+		<td>
+			<a href="../pbh/register" class="btn btn-lg btn-success">Signup</button>
+		</td>
+	</tr>
+	</table>
+</form>
+</div>
+
+{% endblock %}

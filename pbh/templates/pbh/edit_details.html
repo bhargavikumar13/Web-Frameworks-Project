@@ -1,0 +1,39 @@
+{% extends 'pbh/base.html' %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Edit Details</h1>
+	    <p class="lead">Check and update your details here</p>
+	  </div>
+	</div>
+</div>
+
+<div class="row" class="body-row">
+	<form method="POST">
+	<table class="table">
+		{% csrf_token %}
+		{{form.as_table}}
+	<tr>
+		<td>
+			<button type="submit" class="btn btn-lg btn-primary">Update Details</button>
+		</td>
+		<td>
+		</td>
+	</tr>
+	</table>
+	<script type="text/javascript">
+		if ($("#id_srn").val() != "") {
+			$('#id_srn').prop('readonly', true);
+		}
+		
+	</script>>
+</form>
+</div>
+</div>
+
+{% endblock %}
+

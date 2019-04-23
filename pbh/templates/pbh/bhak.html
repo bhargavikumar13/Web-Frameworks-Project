@@ -1,0 +1,469 @@
+
+<!DOCTYPE html> 
+<html>
+ 
+<head>
+ 
+    <title>REGISTER</title>
+ 
+    <style type="text/css">
+ 
+        body{
+ 
+            margin:0px;
+ 
+            padding:0px;
+ 
+        }
+ 
+        #ss{
+ 
+            height: 50px;
+ 
+            color: #202123;
+ 
+        }
+ 
+        .fa {
+ 
+            padding: 10px;
+ 
+            font-size: 30px;
+ 
+            width: 30px;
+ 
+            text-align: center;
+ 
+            text-decoration: none;
+ 
+ 
+        }
+ 
+ 
+ 
+        .fa:hover {
+ 
+            opacity: 0.7;
+ 
+        }
+ 
+ 
+ 
+        .fa-facebook {
+ 
+        background: #3B5998;
+ 
+        color: white;
+ 
+        }
+ 
+ 
+ 
+        .fa-twitter {
+ 
+        background: #55ACEE;
+ 
+        color: white;
+ 
+        }
+ 
+        .fa-linkedin {
+ 
+          background: #007bb5;
+ 
+          color: white;
+ 
+        }
+ 
+ 
+        .fa-youtube {
+ 
+          background: #bb0000;
+ 
+          color: white;
+ 
+        }
+ 
+ 
+        .fa-instagram {
+ 
+          background: #125688;
+ 
+          color: white;
+ 
+        }
+ 
+        #social{
+ 
+            float: right;
+ 
+        
+ 
+        }
+ 
+        #searchbar{
+ 
+            float: left;
+ 
+        }
+ 
+        .searchelem{
+ 
+            overflow: hidden; /*Important*/
+ 
+            background-color: #202123;
+ 
+            height: 50px;
+ 
+        }
+ 
+        .searchelem a {
+ 
+            height:50px;
+ 
+            float: left;
+ 
+            display: block;
+ 
+            color: white;
+ 
+            text-align: center;
+ 
+            padding: 14px 16px;
+ 
+            text-decoration: none;
+ 
+            font-size: 22px;
+ 
+            font-family:Agency FB;
+ 
+        }
+ 
+        #searchbar a:hover{
+ 
+            background-color: #ddd;
+ 
+            color: black;
+ 
+        }
+ 
+        #searchbar a.active{
+ 
+            background-color: #fc3807;
+ 
+            color: white;
+ 
+        }
+ 
+        .searchelem input[type=text] {
+ 
+            float: right;
+ 
+            padding: 6px;
+ 
+            border: none;
+ 
+            margin-top: 8px;
+ 
+            margin-right: 16px;
+ 
+            margin-left:10px;
+ 
+            font-size: 17px;
+ 
+        }
+ 
+        #header1{
+ 
+            height:160px;
+ 
+            background-color: white;
+ 
+            text-align: center;
+ 
+            font-family: Agency FB;
+ 
+            font-size:100px;
+ 
+            padding-top: 20px;
+ 
+        }
+ 
+        #mainform{
+ 
+            height: 1800px;
+ 
+            background-color: #202123;
+ 
+            color: white;
+ 
+            font-size: 40px;
+ 
+            font-family: Agency FB;
+ 
+        }
+
+        .payment-table td {
+            padding: 10px;
+        }
+
+        .nav-body {
+            -webkit-box-shadow: 0px 0px 2px 1px rgba(148,148,148,1);
+            -moz-box-shadow: 0px 0px 2px 1px rgba(148,148,148,1);
+            box-shadow: 0px 0px 2px 1px rgba(148,148,148,1);
+            border-radius: 8px;
+
+        }
+        
+        .form-display td {
+            padding: 10px;
+        }
+
+        .form-display td input[type=text] {
+            padding: 5px;
+            height: 100%;
+
+        }
+
+        .form-display select {
+            width: 400px;
+            padding: 5px;
+            border-radius: 6px;
+        }
+
+       .nav-head:hover {
+            background-color: rgb(69, 173, 102);
+        }
+
+        .primary-button {
+            width: 30%;
+            display: inline-block;
+            margin-left: 20%;
+            background-color: rgb(51, 56, 221);
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+    </style>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script type="text/javascript">
+        function show_nav_tab(id, elemId) {
+            var nav_elems = document.getElementsByClassName("nav-body");
+            var element =  document.getElementById(elemId);
+            for (var i = 0; i < nav_elems.length; i++) {
+                nav_elems[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+            var nav_tabs = document.getElementsByClassName("nav-head");
+            for (var i = 0; i < nav_elems.length; i++) {
+                nav_tabs[i].style.backgroundColor = 'white';
+            }
+            element.style.backgroundColor = 'rgb(69, 173, 102)';
+        }
+    </script>
+ 
+</head>
+ 
+<body>
+ 
+        <div id ="ss" style="background-color: #202123">
+                <div id = "social" >    
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+ 
+                <div id = "searchbar"class="searchelem">
+                      <a class="active" href="main.html">Home</a>
+                      <a href="#about">About</a>
+                      <a href="#contact">Contact</a>
+                      <input type="text" placeholder="Search..">
+                </div>
+ 
+ 
+        </div>
+ 
+    <div id="header1" style="opacity: 0.5">
+        <i class="fa fa-money"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAYMENT 
+    </div>
+        <hr style="margin-top: -3%"/>
+    <div id="mainform" style="background-color: white; color: black;padding: 20px;">
+        Please Select Payment Method:
+    <div style="margin-left:19%;margin-top: 5%">
+        <table class="payment-table">
+            <tr>
+                <td>
+                    <a onclick="return show_nav_tab('nav-credit-card', 'nav-head-cc')">
+                        <span id="nav-head-cc" class= "nav-head" style="border: 0.5px solid grey; padding: 10px; font-size: 30px; border-radius: 8px;display: inline-block;width: 150px; background-color: rgb(69, 173, 102)">
+                            <i class="fa fa-credit-card" style="padding-left: 40%"></i><br/>
+                            <span style="font-size: 20px;padding-left: 26%">
+                                Credit Card
+                            </span>
+                        </span>
+                    </a>
+                </td>
+                <td>
+                    <a onclick="return show_nav_tab('nav-paypal', 'nav-head-paypal')">
+                     <span id="nav-head-paypal" class= "nav-head" style="border: 0.5px solid grey; padding: 10px; font-size: 30px; border-radius: 8px;display: inline-block; width: 150px">
+                        <i class="fa fa-paypal" style="padding-left: 40%"></i><br/>
+                        <span style="font-size: 20px;padding-left: 35%">
+                            PayPal
+                        </span>
+                    </span>
+                    </a>
+                </td>
+                <td>
+                    <a onclick="return show_nav_tab('nav-internet-banking', 'nav-head-internet-banking')">
+                     <span id="nav-head-internet-banking" class= "nav-head" style="border: 0.5px solid grey; padding: 10px; font-size: 30px; border-radius: 8px;display: inline-block; width: 150px">
+                        <i class="fa fa-university" style="padding-left: 40%"></i><br/>
+                        <span style="font-size: 20px;padding-left: 17%">
+                            Internet Banking
+                        </span>
+                     </span>
+                    </a>
+                </td>
+                <td>
+                    <a onclick="return show_nav_tab('nav-google-wallet', 'nav-head-google-wallet')">
+                        <span id="nav-head-google-wallet" class= "nav-head" style="border: 0.5px solid grey; padding: 10px; font-size: 30px; border-radius: 8px;display: inline-block; width: 150px">
+                            <i class="fa fa-google-wallet" style="padding-left: 40%"></i><br/>
+                            <span style="font-size: 20px;padding-left: 22%">
+                                Google Wallet
+                            </span>
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div id="nav-credit-card" style="margin-top: 2%; margin-right: 26%" class="nav-body">
+            <span style="padding: 20px">
+                Credit Card    
+            </span>
+            
+            <hr style="margin-top: 0px" />
+            <table style="font-size: 20px" class="form-display">
+                <tr>
+                    <td>
+                        Name on Card
+                    </td>
+                    <td>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Credit card number
+                    </td>
+                    <td>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+                        Expiry Date
+                    </td>
+                    <td>
+                        <input type="text" id="expdate" name="expyear" placeholder="MM/YYYY">
+                    </td>
+                     <td>
+                        CVV
+                    </td>
+                    <td>
+                        <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="nav-paypal" style="margin-top: 2%; margin-right: 26%; display: none" class="nav-body">
+            <span style="padding: 20px">
+                PayPal    
+            </span>
+            
+            <hr style="margin-top: 0px" />
+            <table style="font-size: 20px" class="form-display">
+                <tr>
+                    <td>
+                        PayPal Email
+                    </td>
+                    <td>
+                        <input type="text" id="cname" name="paypal-email" placeholder="john.doe@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        OTP
+                    </td>
+                    <td>
+                        <input type="text" id="otp" name="otp" placeholder="XXXXXXXXX">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="nav-internet-banking" style="margin-top: 2%; margin-right: 26%; display: none" class="nav-body">
+            <span style="padding: 20px">
+                Internet Banking    
+            </span>
+            
+            <hr style="margin-top: 0px" />
+            <table style="font-size: 20px" class="form-display">
+                <tr>
+                    <td>
+                        Select Bank
+                    </td>
+                    <td>
+                        <select>
+                            <option>ICICI Bank</option>
+                            <option>SBI Bank</option>
+                            <option>Citi Bank</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="nav-google-wallet" style="margin-top: 2%; margin-right: 26%; display: none" class="nav-body">
+            <span style="padding: 20px">
+                Google Wallet    
+            </span>
+            
+            <hr style="margin-top: 0px" />
+            <table style="font-size: 20px" class="form-display">
+                <tr>
+                    <td>
+                        Google Wallet Email
+                    </td>
+                    <td>
+                        <input type="text" id="cname" name="paypal-email" placeholder="john.doe@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        OTP
+                    </td>
+                    <td>
+                        <input type="text" id="otp" name="otp" placeholder="XXXXXXXXX">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <a href="Thank_you.html">
+            <button class="primary-button">
+                Pay Now
+            </button>
+            </a>
+        </div>
+    </div>
+    </div>  
+
+ 
+</body>
+ 
+</html>

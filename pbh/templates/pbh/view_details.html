@@ -1,0 +1,115 @@
+{% extends 'pbh/base.html' %}
+
+{% block content %}
+<style type="text/css">
+#textbocl1{
+			margin-left: 173px;
+			height: 40px;
+			border-radius: 10px;
+			width: 200px;
+			font-size: 25px;
+		}
+		#submitbtt{
+			margin-left: 642px;
+			height: 44px;
+			border-radius: 10px;
+			width: 80px;
+			font-family: Agency FB;
+			font-size: 30px;
+			color: black;
+			background-color: white;
+		}
+</style>
+<script type="text/javascript">
+
+var buttonhit=0;
+function getvalue()
+{
+    
+ buttonhit++;
+
+ if(buttonhit==1){
+ var elem=document.createElement("div");
+ elem.setAttribute('id','app');
+ document.getElementById('app1').appendChild(elem);
+}
+if(buttonhit>1)
+{
+	var elem=document.getElementById("app");
+	elem.parentNode.removeChild(elem);
+	var elem=document.createElement("div");
+ 	elem.setAttribute('id','app');
+ 	document.getElementById('app1').appendChild(elem);
+}
+ var count=0;
+ {% if post is None %}
+ 	<div class="alert alert-danger">
+  	No Details found
+	</div>
+{% else %}
+ 		var para=document.createElement("p");
+ 		para.innerHTML="SRN={{post.srn}}";
+ 		var para=document.createElement("p");
+ 		para.innerHTML="NAME={{post.name}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="FATHER NAME={{post.father_name}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="MOTHER NAME={{post.mothers_name}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="AGE={{post.age}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="DATE OF BIRTH={{post.dob}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="EMAIL={{post.email}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="PHONE NUMBER={{post.pno}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="PARENT PHONE NUMBER={{post.ppno}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="BRANCH={{post.field}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="LG NAME={{post.lg_name}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="LG AGE={{post.lg_age}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="LG DATE OF BIRTH={{post.lg_dob}}";
+ 		document.getElementById('app').appendChild(para);
+ 		var para=document.createElement("p");
+ 		para.innerHTML="LG PHONE NUMBER={{post.lg_pno}}";
+		document.getElementById('app').appendChild(para);	
+  {% endif %}
+
+}
+
+</script>
+
+
+<div class="container">
+<div class="row">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">View Details</h1>
+	    <p class="lead">View your details here</p>
+	  </div>
+	</div>
+</div>
+
+
+<div class="row" class="body-row">
+	<div id="app1"></div>
+</div>
+
+<script type="text/javascript">getvalue();</script>
+
+{% endblock %}
